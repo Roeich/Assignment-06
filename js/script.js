@@ -196,3 +196,38 @@ function showPetDetails(pet){
     `;
     pet_details_modal.showModal();
 }
+
+// sort pet by price
+
+function sortByPrice(){
+    let activeCategory=document.querySelector(".category_btn.active");
+    if(activeCategory){
+        fetch(`https://openapi.programming-hero.com/api/peddy/category/${activeCategory.innerText.toLowerCase()}`)
+        .then((res)=>res.json())
+        .then((data)=>displayPets(sortDescending(data.data)))
+        .catch((err)=>console.log(err));
+    }else{
+        fetch('https://openapi.programming-hero.com/api/peddy/pets')
+        .then((res)=>res.json())
+        .then((data)=>displayPets(sortDescending(data.pets)))
+        .catch((err)=>console.log(err));
+    }
+}
+
+function sortDescending(pets){
+    if(pets.length>0){
+        pets.sort((pet1,pet2)=>{
+            let pet1Price=isNaN(parseFloat(pet1.price))?0:parseFloat(pet1.price);
+            let pet2Price=isNaN(parseFloat(pet2.price))?0:parseFloat(pet2.price);
+
+            if(pet1Price>pet2Price){
+                return -1;
+            }else if(pet1Price<pet2Price){
+                return 1;
+            }else{
+                return 0;
+            }
+        })
+    }
+    return pets;
+}
