@@ -17,15 +17,24 @@
             font-family: "Lato", sans-serif;
         }
         
-        .ff-inter {
+        .ff_inter {
             font-family: "Inter", sans-serif;
+        }
+        
+        .category_btn {
+            border-radius: 15px;
+        }
+        
+        .category_btn.active {
+            border-radius: 50rem;
+            background-color: rgba(14, 121, 129, 0.10);
         }
     </style>
 </head>
 
 <body>
     <!-- header -->
-    <header class="sticky bg-white top-0">
+    <header class="sticky bg-white top-0 z-20">
         <div class="container xl:max-w-[1320px] mx-auto">
             <div class="navbar">
                 <div class="navbar-start">
@@ -76,7 +85,7 @@
             <div class="container xl:max-w-[752px] px-4 mx-auto">
                 <div class="text-center">
                     <h3 class="text-xl xl:text-2xl text-[#13131399] mb-5">
-                        Bringing Families Together ️‍🔥 
+                        Bringing Families Together ️‍🔥
                     </h3>
                     <h1 class="text-4xl xl:text-7xl font-black mb-5">
                         Your Path to Adoption Starts Here
@@ -89,6 +98,91 @@
                     </div>
                     <div>
                         <img class="w-full" src="img/pet.webp" alt="pet">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- banner section -->
+        <section class="py-16">
+            <div class="container xl:max-w-[752px] px-4 mx-auto">
+                <div class="text-center">
+                    <h2 class="text-3xl xl:text-4xl font-black mb-6">
+                        Adopt Your Best Friend
+                    </h2>
+                    <p class="text-[#13131399] mb-12">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                    </p>
+                </div>
+            </div>
+            <div class="container xl:max-w-[1320px] px-4 mx-auto">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8" id="categories-container">
+
+                </div>
+                <div class="flex gap-3 justify-between mb-8">
+                    <div>
+                        <h2 class="text-2xl font-bold">Best Deal For you</h2>
+                    </div>
+                    <div>
+                        <a class="btn btn-soft rounded-lg text-white bg-[#0E7A81]" href="#">Sort by Price</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="grid grid-cols-1 xl:grid-cols-4 gap-4">
+                        <div class="xl:col-span-3">
+                            <!-- pets container -->
+                            <div id="pets-container">
+                                <div class="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <div class="card p-4 xl:p-5 border rounded-xl border-gray-100">
+                                        <figure class="mb-4">
+                                            <img class="h-40 w-full object-cover rounded-xl" src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-xl" />
+                                        </figure>
+                                        <div class="card-body p-0">
+                                            <h3 class="text-xl font-bold mb-2">Mister Tartosh</h3>
+                                            <div class="text-[#13131399]">
+                                                <div class="mb-1">
+                                                    <img class="inline-block size-4 me-2" src="img/icon-grid.svg" alt="grid">
+                                                    Breed: Golder retriever
+                                                </div>
+                                                <div class="mb-1">
+                                                    <img class="inline-block size-4 me-2" src="img/icon-calender.svg" alt="calender">
+                                                    Birth: 2024
+                                                </div>
+                                                <div class="mb-1">
+                                                    <img class="inline-block size-4 me-2" src="img/icon-gender.svg" alt="gender">
+                                                    Gender: Female
+                                                </div>
+                                                <div class="mb-1">
+                                                    <img class="inline-block size-4 me-2" src="img/icon-dollar.svg" alt="dollar">
+                                                    Price : 199$
+                                                </div>
+                                            </div>
+                                            <div class="card-actions flex justify-between gap-2 border-t border-t-gray-100 pt-4">
+                                                <button class="btn text-[#0E7A81]" type="button">
+                                                    <img class="inline-block size-5" src="img/icon-like.svg" alt="like">
+                                                </button>
+                                                <button class="btn text-[#0E7A81]" type="button">Adopt</button>
+                                                <button class="btn text-[#0E7A81]" type="button">Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- no information  -->
+                            <div id="not-found-container" class="text-center py-24 px-12 rounded-3xl bg-slate-100 hidden">
+                                <img class="inline-block size-24 xl:size-40 mb-6" src="img/error.webp" alt="error">
+                                <h3 class="text-3xl font-bold ff_inter mb-4">No Information Available</h3>
+                                <p class="text-[#13131399]">
+                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-2 gap-4 xl:gap-5 border border-gray-100 rounded-xl p-4 xl:p-5">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
