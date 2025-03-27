@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         body {
             color: #131313;
             font-family: "Lato", sans-serif;
@@ -94,7 +97,7 @@
                         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
                     </p>
                     <div class="mb-12">
-                        <a class="btn btn-soft rounded-lg text-white bg-[#0E7A81]" href="#">View More</a>
+                        <a class="btn btn-soft rounded-lg text-white bg-[#0E7A81]" href="#pets-section">View More</a>
                     </div>
                     <div>
                         <img class="w-full" src="img/pet.webp" alt="pet">
@@ -103,8 +106,8 @@
             </div>
         </section>
 
-        <!-- banner section -->
-        <section class="py-16">
+        <!-- Adopt your best friend section -->
+        <section class="py-16" id="pets-section">
             <div class="container xl:max-w-[752px] px-4 mx-auto">
                 <div class="text-center">
                     <h2 class="text-3xl xl:text-4xl font-black mb-6">
@@ -131,7 +134,7 @@
                     <div class="grid grid-cols-1 xl:grid-cols-4 gap-4">
                         <div class="xl:col-span-3">
                             <!-- loader -->
-                            <div id="loader-box" class="text-center py-20 px-12 rounded-3xl bg-slate-50 hidden">
+                            <div id="loader-box" class="text-center py-20 px-4 lg:px-12 rounded-3xl bg-slate-50 hidden">
                                 <span class="loading loading-dots loading-lg"></span>
                             </div>
 
@@ -141,7 +144,7 @@
                             </div>
 
                             <!-- no information  -->
-                            <div id="not-found-box" class="text-center py-24 px-12 rounded-3xl bg-slate-100 hidden">
+                            <div id="not-found-box" class="text-center py-24 px-4 lg:px-12 rounded-3xl bg-slate-100 hidden">
                                 <img class="inline-block size-24 xl:size-40 mb-6" src="img/error.webp" alt="error">
                                 <h3 class="text-3xl font-bold ff_inter mb-4">No Information Available</h3>
                                 <p class="text-[#13131399]">
@@ -150,17 +153,32 @@
                             </div>
                         </div>
                         <div>
-                            <div class="grid grid-cols-2 gap-4 xl:gap-5 border border-gray-100 rounded-xl p-4 xl:p-5">
-
+                            <div class="grid grid-cols-2 gap-3 xl:gap-4 border border-gray-100 rounded-xl p-4 xl:p-5 min-h-48" id="wishlist-container">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- adoption modal -->
+        <dialog id="adoption_modal" class="modal">
+            <div class="modal-box text-center">
+                <img class="inline-block size-20" src="img/hand-shake.png" alt="hand shake">
+                <h3 class="text-3xl font-bold mb-1">Congrats</h3>
+                <p class="text-[#13131399] mb-5">Adoption process is start for your pet</p>
+                <div id="countdown" class="text-6xl font-black mb-3">0</div>
+            </div>
+        </dialog>
+
+        <!-- pet details modal -->
+        <dialog id="pet_details_modal" class="modal">
+            <!-- <div class="modal-box">
+            </div> -->
+        </dialog>
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
