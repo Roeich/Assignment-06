@@ -130,47 +130,18 @@
                 <div>
                     <div class="grid grid-cols-1 xl:grid-cols-4 gap-4">
                         <div class="xl:col-span-3">
+                            <!-- loader -->
+                            <div id="loader-box" class="text-center py-20 px-12 rounded-3xl bg-slate-50 hidden">
+                                <span class="loading loading-dots loading-lg"></span>
+                            </div>
+
                             <!-- pets container -->
-                            <div id="pets-container">
-                                <div class="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    <div class="card p-4 xl:p-5 border rounded-xl border-gray-100">
-                                        <figure class="mb-4">
-                                            <img class="h-40 w-full object-cover rounded-xl" src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-xl" />
-                                        </figure>
-                                        <div class="card-body p-0">
-                                            <h3 class="text-xl font-bold mb-2">Mister Tartosh</h3>
-                                            <div class="text-[#13131399]">
-                                                <div class="mb-1">
-                                                    <img class="inline-block size-4 me-2" src="img/icon-grid.svg" alt="grid">
-                                                    Breed: Golder retriever
-                                                </div>
-                                                <div class="mb-1">
-                                                    <img class="inline-block size-4 me-2" src="img/icon-calender.svg" alt="calender">
-                                                    Birth: 2024
-                                                </div>
-                                                <div class="mb-1">
-                                                    <img class="inline-block size-4 me-2" src="img/icon-gender.svg" alt="gender">
-                                                    Gender: Female
-                                                </div>
-                                                <div class="mb-1">
-                                                    <img class="inline-block size-4 me-2" src="img/icon-dollar.svg" alt="dollar">
-                                                    Price : 199$
-                                                </div>
-                                            </div>
-                                            <div class="card-actions flex justify-between gap-2 border-t border-t-gray-100 pt-4">
-                                                <button class="btn text-[#0E7A81]" type="button">
-                                                    <img class="inline-block size-5" src="img/icon-like.svg" alt="like">
-                                                </button>
-                                                <button class="btn text-[#0E7A81]" type="button">Adopt</button>
-                                                <button class="btn text-[#0E7A81]" type="button">Details</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div id="pets-container" class="hidden">
+
                             </div>
 
                             <!-- no information  -->
-                            <div id="not-found-container" class="text-center py-24 px-12 rounded-3xl bg-slate-100 hidden">
+                            <div id="not-found-box" class="text-center py-24 px-12 rounded-3xl bg-slate-100 hidden">
                                 <img class="inline-block size-24 xl:size-40 mb-6" src="img/error.webp" alt="error">
                                 <h3 class="text-3xl font-bold ff_inter mb-4">No Information Available</h3>
                                 <p class="text-[#13131399]">

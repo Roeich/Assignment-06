@@ -39,8 +39,11 @@ function loadPetsByCategory(category){
 }
 function displayPets(pets){
     const petsContainer=document.getElementById("pets-container");
-    const notFoundCcontainer=document.getElementById("not-found-container");
+    const notFoundBox=document.getElementById("not-found-box");
+    notFoundBox.classList.add("hidden");
+    petsContainer.classList.add("hidden");
     petsContainer.innerHTML="";
+    showLoader();
     if(pets.length>0){
         let innerHtml='<div class="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">';
         for(const pet of pets){
@@ -83,11 +86,26 @@ function displayPets(pets){
         innerHtml+='</div>'
         petsContainer.innerHTML=innerHtml;
 
-        notFoundCcontainer.classList.add("hidden");
-        petsContainer.classList.remove("hidden");
+        setTimeout(()=>{
+            hideLoader();
+            notFoundBox.classList.add("hidden");
+            petsContainer.classList.remove("hidden");
+        },2000);
     }else{
-        petsContainer.classList.add("hidden");
-        notFoundCcontainer.classList.remove("hidden");
+        setTimeout(()=>{
+            hideLoader();
+            petsContainer.classList.add("hidden");
+            notFoundBox.classList.remove("hidden");
+        },2000);
     }
+    
+}
+function showLoader(){
+    const petsBox=document.getElementById("loader-box");
+    petsBox.classList.remove("hidden");
+}
+function hideLoader(){
+    const petsBox=document.getElementById("loader-box");
+    petsBox.classList.add("hidden");
 }
 loadPets();
